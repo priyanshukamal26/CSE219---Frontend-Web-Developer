@@ -1,0 +1,44 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: lightskyblue;
+}
+
+.header{
+    background-color: lightblue;
+    border: 2px solid blue;
+    margin-bottom: 20px;
+}
+
+.header-container{
+    padding: 20px;
+    text-align: center;
+}
+
+.content{
+    padding: 20px;
+}
+
+.section{
+    margin: 20px;
+}
+
+.card{
+    width: 100%;
+    padding: 40px 5px;
+    border: 1px solid blue;
+    margin: auto;
+    background-color: aqua;
+}
+
+.footer{
+    background-color: lightcoral;
+    padding: 5px;
+    border-top: 2px solid black;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    
+}
