@@ -27,5 +27,29 @@
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-evenly;
+}
+
+.unigallery img{
+    width: 100%;
+}
+
+.contactForm{
+    text-align: center;
+    margin: 20px;
+}
+
+.contactForm input{
+    margin: 5px;
+    padding: 5px;
+}
+
+.footer{
+    text-align: center;
+    padding: 15px;
+    background-color: #eee;
+}
+
+.footer a{
+    margin: 0 10px;
+    text-decoration: none;
 }
