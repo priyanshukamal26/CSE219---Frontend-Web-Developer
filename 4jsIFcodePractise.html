@@ -1,0 +1,33 @@
+<!-- // WAP to check result of 5 different subjects.
+// If the user fails in 3, display NOT PASSES : Grade D.
+// If user passed in all subjects, display O Grade.
+// Passed in 2, C Grade. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Code Practise</title>
+</head>
+<body>
+    <script>
+        let m1 = 93, m2 = 82, m3 = 98;
+        let pass  = 0;
+        if(m1 >= 35) pass++;
+        if(m2 >= 35) pass++;
+        if(m3 >= 35) pass++;
+        console.log("Marks are 93, 82 and 98.");
+        if(pass = 3) {
+            console.log("Passed in all subjects. Grade O");
+        }
+        else if(pass = 2) {
+            console.log("Passed in 2 subjects. Grade B");
+        }
+        else if(pass = 1) {
+            console.log("Passed in 1 subject. Grade C");
+        }
+        else console.log("Alas! Grade D");
+    </script>
+</body>
+</html>

@@ -6,44 +6,45 @@
     <title>JavaScript Basics</title>
     <script src="4jsBasics.js" defer></script>
     <script>
-        console.log("Hello from Head!")
+        console.log("!!! Javascript Basic Codes !!!")
     </script>
 </head>
 <body>
     <script>
-        // // Printing
-        // console.log("Hello from Body!") // Printing on console
-        // document.write("Hello Earth!") // Printing on webpage
+        // Printing
+        console.log("Hello from Body!") // Printing on console
+        document.write("Hello Earth!") // Printing on webpage
 
 
-        // // Initialisation and Printing
-        // var name = "ABC";
-        // let age = 22;
-        // const pi = 3.1415;
-        // console.log("Name : ", name);
-        // console.log("Age : ", age);
-        // console.log("Pi : ", pi);
+        // Initialisation and Printing
+        var name = "ABC";
+        let age = 22;
+        const pi = 3.1415;
+        console.log("Name : ", name);
+        console.log("Age : ", age);
+        console.log("Pi : ", pi);
 
 
-        // // Arithmatic Operations
-        // let a = 10, b = 3;
-        // console.log("a + b =", a + b);
-        // console.log("a - b =", a - b);
-        // console.log("a * b =", a * b);
-        // console.log("a / b =", a / b);
-        // console.log("a % b =", a % b);
+        // Arithmatic Operations
+        let a = 10, b = 3;
+        console.log("a + b =", a + b);
+        console.log("a - b =", a - b);
+        console.log("a * b =", a * b);
+        console.log("a / b =", a / b);
+        console.log("a % b =", a % b);
         
-        // // Assignment Operator
-        // let x = 5;
-        // console.log("Original value of x=", x);
-        // x += 3;
-        // console.log("x after x+=3 =", x);
-        // x -= 2;
-        // console.log("x after x-=2 =", x);
-        // x *= 4;
-        // console.log("x after x*=4 =", x);
-        // x /= 6;
-        // console.log("x after x/=6 =", x);
+
+        // Assignment Operator
+        let x = 5;
+        console.log("Original value of x=", x);
+        x += 3;
+        console.log("x after x+=3 =", x);
+        x -= 2;
+        console.log("x after x-=2 =", x);
+        x *= 4;
+        console.log("x after x*=4 =", x);
+        x /= 6;
+        console.log("x after x/=6 =", x);
 
 
         // Comparision Operator
@@ -55,6 +56,66 @@
         console.log("m > n is", m > n); // FALSE.
         console.log("m <= n is", m <= n); // TRUE.
 
+        
+        // Logical Operator
+        let a1 = 5, b1 = 10;
+        console.log("a1 > 0 && b1 > 0 is", a1 > 0 && b1 > 0); // TRUE.
+        console.log("a1 > 0 || b1 > 0 is", a1 > 0 || b1 > 0); // TRUE.
+        console.log("!(a1 > 10) is", !(a1 > 10));
+
+
+        // IF statements
+        let age1 = 20;
+        console.log("Your age =", age1);
+        if(age1 > 18) console.log("You are eligible to vote.");
+        else console.log("You are NOT eligible to vote.")
+        
+        let marks = 20;
+        console.log("Obtained marks =", marks);
+        if(marks > 33) console.log("You PASSED! Yay!!! *\\(^o^)/*");
+        else console.log("You Failed :(");
+
+
+        // SWITCH statements
+        let day = 4;
+        console.log("Entered value =", day);
+        switch(day)
+        {
+            case 1: console.log("Monday."); break;
+            case 2: console.log("Tuesday."); break;
+            case 3: console.log("Wednesday."); break;
+            case 4: console.log("Thursday."); break;
+            case 5: console.log("Friday."); break;
+            case 6: console.log("Saturday."); break;
+            case 7: console.log("Sunday."); break;
+            default: console.log("Value outside defined limit.");
+        }
+
+
+        // LOOPING STATEMENTS // //
+        // ---------------------------
+
+        // FOR Loop
+        console.log("Output from FOR Loop");
+        for(let i = 1; i < 5; i++) {
+            console.log("Number :", i);
+        }
+
+        // WHILE Loop
+        console.log("Output from WHILE Loop");
+        let i = 1;
+        while(i <= 5) {
+            console.log("Count :", i);
+            i++;
+        }
+
+        // DO-WHILE Loop
+        console.log("Output from DO-WHILE Loop");
+        let j = 1;
+        do{
+            console.log("Value :", j);
+            j++;
+        } while(j<=5);
     </script>
 </body>
 </html>
