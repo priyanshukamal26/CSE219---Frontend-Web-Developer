@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.uniName{
+    color: white;
+    padding: 30px;
+}
+
+.header{
+    background-color: orange;
+    text-align: center;
+}
+
+.datadisplay{
+    text-align: center;
+    padding: 10px;
+}
+
+.mainsec{
+    width: 100%;
+}
+
+.unigallery{
+    margin: 1% 10%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+}
