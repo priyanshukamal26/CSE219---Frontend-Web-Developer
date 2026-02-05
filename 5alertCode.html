@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+            /* display: block;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        .calarea{
+            margin: auto;
+            width: 40%;
+            height: auto;
+            padding: 2% 2%;
+            border: 2px solid blue;
+            border-radius: 50px;
+        }
+
+        button {
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function add() {
+            let num1 = 4;
+            let num2 = 6;
+            let num3 = num1 + num2;
+            alert("Addition : " + num3);
+        }
+
+        function mul() {
+            let num1 = 4;
+            let num2 = 6;
+            let num3 = num1 * num2;
+            alert("Multiplication : " + num3);
+        }
+
+        function sub() {
+            let num1 = 4;
+            let num2 = 6;
+            let num3 = num1 - num2;
+            alert("Subtraction : " + num3);
+        }
+
+        function div() {
+            let num1 = 4;
+            let num2 = 6;
+            let num3 = num1 / num2;
+            document.getElementById('result').innerText = "The quotient is : " + num3
+        }
+
+        function mod() {
+            let num1 = 4;
+            let num2 = 6;
+            let num3 = num1 % num2;
+            document.getElementById('result').innerText = "The remainder is : " + num3
+        }
+</script>
+    <div class="calarea">
+        <h1>CALCULATOR</h1>
+        <section>
+            <button onclick = "add()">ADD</button>
+            <button onclick = "mul()">MUL</button>
+            <button onclick = "sub()">SUB</button>
+            <button onclick = "div()">DIV</button>
+            <button onclick = "mod()">MOD</button>
+        </section>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
+
+<!-- Create a calculator, ADD, MUL, SUB, DIV, MOD
+CSS - All items should be in center, on the top h1 Calculator (at the center).
+bg color, button
+should have some border. -->

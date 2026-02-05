@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Code</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        
+        .area {
+            display: block;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            height: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="area">
+        <h2>Class 10th</h2>
+        <input type="text" id="num1" placeholder="Enter marks obtained">
+        <input type="text" id="num2" placeholder="Enter total marks">
+        <button onclick = "calculate10Percentage()">CLICK</button>
+        <p id="result1"></p>
+
+        <h2>Class 12th</h2>
+        <input type="text" id="num3" placeholder="Enter marks obtained">
+        <input type="text" id="num4" placeholder="Enter total marks">
+        <button onclick = "calculate12Percentage()">CLICK</button>
+        <p id="result2"></p>
+    </div>
+
+    <script>
+        function calculate10Percentage() {
+            num1 = Number(document.getElementById('num1').value)
+            num2 = Number(document.getElementById('num2').value)
+            page1 = (num1 / num2) * 100;
+            document.getElementById('result1').innerText = "The percentage of 10th is : " + page1 + "%";
+        }
+        function calculate12Percentage() {
+            num3 = Number(document.getElementById('num3').value)
+            num4 = Number(document.getElementById('num4').value)
+            page2 = (num3 / num4) * 100;
+            document.getElementById('result2').innerText = "The percentage of 12th is : " + page2 + "%";
+        }
+    </script>
+</body>
+</html>
