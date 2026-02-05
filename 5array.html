@@ -12,9 +12,16 @@
 
         // Adding an element in a preinitialized array
         fruits.push("Grapes")
+        
+        // add to the start of array
+        fruits.unshift("Mango")
+        
+        // remove the last element from the array
+        fruits.pop();
 
         // Display an array
         document.write("Fruits list : <br>")
+        
         for(let i = 0; i < fruits.length; i++) {
             document.write(fruits[i] + "<br>")
         }
@@ -22,6 +29,8 @@
         // display array length
         document.write("<br> Total Fruits :" + fruits.length);
 
+
+        document.write(fruits);
     </script>
 </body>
 </html>
