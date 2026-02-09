@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Clock</title>
+</head>
+<body style="height: 100%;">
+    <div class="displayBlock" style="display: block; justify-content: center; align-items: center; margin: auto;">
+        <h2 id="date" style="text-align: center; font-size: 100px;"></h2>
+        <h2 id="clock" style="text-align: center; font-size: 100px;"></h2>
+    </div>
+    <script>
+        function updateClock() {
+            let now = new Date()
+            let dateString = now.toLocaleDateString()
+            let timeString = now.toLocaleTimeString()
+            document.getElementById("date").innerText = dateString
+            document.getElementById("clock").innerText = timeString
+        }
+
+        setInterval(updateClock, 1000)
+        updateClock()
+    </script>
+</body>
+</html>

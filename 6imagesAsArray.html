@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in Array</title>
+</head>
+<body style="margin: 0; align-items: center; text-align: center;">
+    <img src="" alt="" id="slide" width="50%">
+    <script>
+        let images = [ // images iside array
+            "ProfileAvatar.jpg", "img2.jpg"
+        ]
+        let index = 0
+        function changeImage() {
+            document.getElementById("slide").src = images[index]
+            index = (index + 1) % images.length
+        }
+
+        // callback function - one function calling another function
+        setInterval(changeImage, 1000) // callback fucntion
+    </script>
+</body>
+</html>

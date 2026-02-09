@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+</head>
+<body>
+    <!-- On input -->
+    <!-- <textarea name="" id="textArea" rows="4" cols="30" oninput="countWords()"></textarea> -->
+
+    <!-- on Button Click -->
+    <textarea name="" id="textArea" rows="4" cols="30"></textarea>
+    <button onclick="countWords()">COUNT</button>
+
+    <p>Word Count :<span id="wordCount">0</span></p>
+
+    <script>
+        function countWords() {
+            text = document.getElementById("textArea").value
+            words = text.trim().split(/\s+/)
+            document.getElementById("wordCount").innerText = words.length
+        }
+    </script>
+</body>
+</html>

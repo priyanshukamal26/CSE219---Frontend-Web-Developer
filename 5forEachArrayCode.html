@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Array Example</title>
+</head>
+<body>
+
+    <h2>Student Array Operations</h2>
+    <div id="output"></div>
+
+    <script>
+        // Create array with roll numbers
+        let students = [
+            { rollNo: 1 },
+            { rollNo: 2 },
+            { rollNo: 3 }
+        ];
+
+        // Add 3 new students at the end
+        students.push({ rollNo: 4 });
+        students.push({ rollNo: 5 });
+        students.push({ rollNo: 6 });
+
+        // Add a new student at the start
+        students.unshift({ rollNo: 0 });
+
+        // Remove last 2 students
+        students.pop();
+        students.pop();
+
+        // Display all students using forEach and arrow function
+        let outputDiv = document.getElementById("output");
+
+        students.forEach((student) => {
+            outputDiv.innerHTML += "Roll No: " + student.rollNo + "<br>";
+        });
+    </script>
+
+</body>
+</html>
