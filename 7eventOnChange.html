@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange</title>
+</head>
+<body>
+    <select name="" id="colorSelect">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <p>Selected Color : <span id="selectedColor">red</span></p>
+
+    <script>
+        document.getElementById("colorSelect").onchange = function() {
+            document.getElementById("selectedColor").innerText = this.value;
+        }
+    </script>
+</body>
+</html>
