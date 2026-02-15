@@ -1,0 +1,66 @@
+<!-- TASK
+Create a form and apply events on it.
+1. Name of the user should be displayed in a paragraph.
+2. Create a dropdown of Subjects and display the selected subject in a paragraph.
+3. Apply an event through which user submit the form, SUBMIT to SUBMITTED.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <br><br>
+
+        <label for="subject">Choose a Subject:</label>
+        <select name="subject" id="subject">
+            <option value="English">English</option>
+            <option value="Science">Science</option>
+            <option value="Mathematics">MAthematics</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit" onclick="detailsFunc()">SUBMIT</button>
+    </form>
+
+    <p id="displayDetails"></p>
+
+    <button type="submit" onclick="toggleFunc()">TOGGLE</button> <br><br>
+
+    <div id="box1">
+        <img src="assets/scene1.jpg" alt="" width="200px">
+        <p>Mirrors!</p>
+    </div>
+
+    <script>
+        document.getElementById("name").oninput = function() { 
+            document.getElementById("displayDetails").innerText = "Name: " + this.value; 
+        } 
+        
+        document.getElementById("subject").onchange = function() { 
+            document.getElementById("displayDetails").innerText += "\nSelected Subject: " + this.value; 
+        } 
+        
+        function detailsFunc() { 
+            document.getElementById("displayDetails").innerText = "SUBMITTED"; 
+        }
+
+        function toggleFunc() {
+            let ele = document.getElementById("box1");
+            if(ele.style.display == "none") {
+                ele.style.display = "block";
+            }
+            else {
+                ele.style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>

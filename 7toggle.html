@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">This is front-end class</p>
+    <button id="toggleButton">Hide</button>
+
+    <script>
+        document.getElementById("toggleButton").onclick = function()
+        {
+            let text = document.getElementById("text")
+            if(text.style.display == "none") {
+                text.style.display = "block"
+                this.innerText = "Hide"
+            }
+            else {
+                text.style.display = "none"
+                this.innerText = "Show"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <img src="assets/scene1.jpg" alt="" id="mainImg" width="300" height="200">
+    <br><br>
+
+    <img src="assets/scene2.jpeg" alt="" width="60" height="40" onmouseenter="changeImage(this)">
+    <img src="assets/scene1.jpg" alt="" width="60" height="40" onmouseenter="changeImage(this)">
+    <img src="assets/scene2.jpeg" alt="" width="60" height="40" onclick="changeImage(this)">
+
+    <script>
+        function changeImage(img) {
+            document.getElementById("mainImg").src = img.src;
+        }
+    </script>
+</body>
+</html>
