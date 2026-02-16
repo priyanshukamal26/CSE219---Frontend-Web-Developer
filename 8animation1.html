@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: wheat;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .box {
+            width: 120px;
+            height: 120px;
+            background: brown;
+            color: azure;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            10% {
+              transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1);
+            }
+            90% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Animation</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 2</title>
+    <style>
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one {
+            height: 150px;
+            width: 150px;
+            background-color: red;
+            animation: changeColor 3s infinite;
+        }
+
+        @keyframes changeColor {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: yellow;
+                border-radius: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+</body>
+</html>

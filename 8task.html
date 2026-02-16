@@ -1,0 +1,85 @@
+<!-- TASK
+------
+Create 2 divs. 1 should include some welcome message for user.
+Another should display some image.
+Include transition for welcome message and animations for image.
+Enter a name in the top, and display the name in the welcome message.
+Align everything at the centre of tehe page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+        }
+
+        .div1 {
+            height: 100px;
+            width: 50%;
+            transition: transform 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .div1:hover {
+            transform: scale(1.2);
+        }
+
+        .div2 {
+            height: 300px;
+            border: 10px solid brown;
+            border-radius: 20px;
+            animation: animata 2s infinite;
+        }
+
+        @keyframes animata {
+            0%{ 
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .div2 img {
+            height: 300px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input id="nameinput" style="margin-top: 20px;" type="text" placeholder="Enter your name">
+    <div class="div1" id="message">Welcome to the Website</div>
+    <div class="div2">
+        <img src="sunflowers themogli.com.jpg">
+    </div>
+
+    <script>
+        const input = document.getElementById('nameinput');
+        const welcomeMessage = document.getElementById('message');
+
+        input.addEventListener('input', function() {
+            const name = input.value.trim();
+            if (name) {
+                welcomeMessage.textContent = `Welcome to the Website, ${name}!`;
+            } else {
+                welcomeMessage.textContent = 'Welcome to the Website';
+            }
+        });
+    </script>
+</body>
+</html>
