@@ -1,0 +1,27 @@
+<!-- Transition - Performing actions on webite, leading to visual changes. Eg - hovering over a button, clicking on a button, etc.
+Animations - Happens automatically, without user interaction. Eg - a loading spinner, a bouncing ball, etc. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .btn {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">CLICK HERE</button>
+
+</body>
+</html>
