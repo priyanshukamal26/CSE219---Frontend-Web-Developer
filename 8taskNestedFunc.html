@@ -1,0 +1,41 @@
+<!-- Creat an attendance management system.
+Current attendance is 10 lectures.
+Check new attendance if lectures attended or not attended, show result.
+Eligible to give exam or not.
+Threshold value is 20 lectures, total value is 40 lectures. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Task - Nested Functions</title>
+</head>
+<body>
+    <script>
+        function attendanceMS() {
+            const maxAttendance = 40;
+            const minAttendance = 20;
+
+            var currAttendance = 10;
+
+            function checkAttendance(currAttendance) {
+                console.log("Current Attendance is ", currAttendance);
+                if(currAttendance > minAttendance)
+                    console.log("Eligible to give exam.");
+                else
+                    console.log("Ineligible. Cannot give exam.")
+            }
+
+            function updateAttendance(newAttendance) {
+                currAttendance = currAttendance + newAttendance;
+                checkAttendance(currAttendance);
+            }
+
+            updateAttendance(25);
+        }
+
+        attendanceMS();
+    </script>
+</body>
+</html>

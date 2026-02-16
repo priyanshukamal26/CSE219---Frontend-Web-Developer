@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function order(product) {
+            function calculatePrice(price, tax) {
+                return price + tax;
+            }
+            
+            var total = calculatePrice(1000, 300);
+
+            function printBill(total) {
+                console.log("Product: ", product);
+                console.log("Total price: ", total)
+            }
+
+            printBill(total)
+        }
+
+        order("Wired earphone")
+    </script>
+</body>
+</html>
