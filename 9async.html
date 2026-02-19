@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Functions</title>
+</head>
+<body>
+    <script>
+        function getData() {
+            return new Promise(resolve => {
+                setTimeout(()=>resolve("data received"), 10000);
+            })
+        }
+
+        async function showData() {
+            const result = await getData()
+            console.log(result)
+        }
+
+        showData()
+    </script>
+</body>
+</html>

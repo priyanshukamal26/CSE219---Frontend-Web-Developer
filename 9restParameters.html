@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameters</title>
+</head>
+<body>
+    <script>
+        const sum = (...numbers) => { // rest parameter. Spread operator is used to convert array to individual elements, rest parameter is used to convert individual elements to array.
+            let total = 0;
+            for(let num of numbers) {
+                total = total + num;
+            }
+            return total;
+        }
+        console.log("Sum = " +sum(1, 2, 3, 7));
+    </script>
+</body>
+</html>
