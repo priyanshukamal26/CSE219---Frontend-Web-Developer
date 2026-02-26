@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Management</title>
+</head>
+<body>
+    <script>
+        class Product {
+            constructor(name, price, category = "ABC") {
+                this.name = name;
+                this.price = price;
+                this.category = category;
+            }
+
+            // function
+            displayProduct()
+            {
+                console.log(`Product Name : ${this.name}`)
+                console.log(`Product Price : ${this.price}`)
+                console.log(`Product Category : ${this.category}`)
+            }
+        }
+
+            // arrow function
+            const calculateTotal = (...prices) =>
+            {
+                const total = prices.reduce((sum, price) => sum + price, 0)
+                return total;
+            }
+
+            // promise
+            const processPayment = (totalAmount) => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() =>
+                    {
+                        if(totalAmount > 0)
+                            resolve(`Payment successful, total paid : ${totalAmount}`)
+                        else
+                            reject(`Payment failed, invalud amount`)
+                    }, 1000)
+                })
+            }
+
+            // async fn
+            const showPaymentStatus = async (amount) =>
+            {
+                try {
+                    const message = await processPayment(amount)
+                    console.log(message)
+                }
+                catch(error) {
+                    console.log(error)
+                }
+            }
+
+            const mainCart = () => 
+            {
+                const product1 = new Product("TV", 34000, "Electronics");
+                const product2 = new Product("TV", 1000);
+                const product3 = new Product("TV", 2000);
+                
+                console.log("Product Details")
+                product1.displayProduct()
+                console.log()
+
+                product2.displayProduct()
+                console.log()
+
+                product3.displayProduct()
+                console.log()
+
+                // array
+                let prices = [product2.price, product2.price, product3.price]
+
+                // destructuring
+                let [p1, p2, p3] = prices
+
+                console.log(`Price 1 : ${p1}`)
+                console.log(`Price 2 : ${p2}`)
+                console.log(`Price 3 : ${p3}`)
+
+
+
+                let updatedPrices = [...prices, 2000]
+                console.log("Updated Price ", updatedPrices)
+
+                // calculate total
+                const totalAmount = calculateTotal(...updatedPrices)
+                console.log(`Total amount : ${totalAmount}`)
+
+                showPaymentStatus(totalAmount)
+            }
+
+            mainCart()
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Task 01</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            height: 10%;
+            color: white;
+            background-color: green;
+        }
+        .mess1 {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .navbar {
+            padding-top: 5px;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        footer {
+            height: 8%;
+            color: white;
+            background-color: gray;
+        }
+
+        section {
+            background-color: lightgray;
+            padding: 30px;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+        }
+
+        .sdiv {
+            /* height: 100%; */
+            background-color: white;
+            border-radius: 10px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .div1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* .subdiv1 {
+            height: 120px;
+        }
+
+        .subdiv2 {
+            height: 120px;
+        } */
+
+        .div2 {
+            height: 250px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="mess1">Welcome to Your Website Task</div>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Console</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="div1">
+            <div class="subdiv1 sdiv">
+                <h5>About CSS</h5>
+                <p>CSS is usedto style and layout web pages, adding colors, spacing, and more.</p>
+            </div>
+            <div class="subdiv2 sdiv">
+                <h5>Responsive Design</h5>
+                <p>Responsive designs ensures your webpage looks great on all devices, from desktops to mobile phones.</p>
+            </div>
+        </div>
+        <div class="div2 sdiv">
+            <h5>Box Model</h5>
+            <p>The CSS box model describes the rectangular boxes generated for elements.
+                It includes margins, borders, padding, and actual content.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>created by Priyanshu Kamal | Follow us on Instagram | Twitter | LinkedIn</p>
+    </footer>
+
+</body>
+</html>

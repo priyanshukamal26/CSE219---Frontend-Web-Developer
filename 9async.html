@@ -7,18 +7,35 @@
 </head>
 <body>
     <script>
-        function getData() {
+        // function getData() {
+        //     return new Promise(resolve => {
+        //         setTimeout(()=>resolve("data received"), 10000);
+        //     })
+        // }
+
+        // async function showData() {
+        //     const result = await getData()
+        //     console.log(result)
+        // }
+
+        // showData()
+
+
+        // TASK
+        // Display a welcome message to user if promise is resolved after 5s
+        // (use async function)
+        function getMessage() {
             return new Promise(resolve => {
-                setTimeout(()=>resolve("data received"), 10000);
+                setTimeout(() => resolve("Welcome User!"), 5000)
             })
         }
 
-        async function showData() {
-            const result = await getData()
-            console.log(result)
+        async function showMessage() {
+            const res = await getMessage();
+            console.log(res);
         }
 
-        showData()
+        showMessage()
     </script>
 </body>
 </html>

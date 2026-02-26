@@ -1,0 +1,233 @@
+<!-- Prepare one empolyee salary management system, where classes and object should be used. 
+Display the details of employees.
+Stoe deatils of 4 different employyees
+1. name
+2. emp id
+3. department
+4. salary
+
+calculate the total salaries of all employees.
+If salary of 1 employee is upated, the total should also change. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Salary Management System</title>
+</head>
+<body>
+    <script>
+
+        // Employee Class
+        class Employee {
+            constructor(name, emp_id, department, salary) {
+                this.name = name;
+                this.emp_id = emp_id;
+                this.department = department;
+                this.salary = salary;
+            }
+
+            // Method to display employee details
+            displayEmployee() {
+                console.log(`Name       : ${this.name}`);
+                console.log(`Employee ID: ${this.emp_id}`);
+                console.log(`Department : ${this.department}`);
+                console.log(`Salary     : ${this.salary}`);
+            }
+
+            // Method to update salary
+            updateSalary(newSalary) {
+                this.salary = newSalary;
+            }
+        }
+
+
+        // Salary Management Class
+        class SalaryManagement {
+            constructor() {
+                this.employees = [];
+            }
+
+            // Add employee
+            addEmployee(employee) {
+                this.employees.push(employee);
+            }
+
+            // Display all employees
+            displayAllEmployees() {
+                this.employees.forEach(emp => emp.displayEmployee());
+            }
+
+            // Calculate total salary
+            calculateTotalSalary() {
+                return this.employees.reduce((total, emp) => total + emp.salary, 0);
+            }
+        }
+
+
+        // Main Function
+        function main() {
+
+            const emp1 = new Employee("Rahul", 101, "IT", 50000);
+            const emp2 = new Employee("Priya", 102, "HR", 40000);
+            const emp3 = new Employee("Amit", 103, "Finance", 45000);
+            const emp4 = new Employee("Neha", 104, "Marketing", 42000);
+
+            const management = new SalaryManagement();
+
+            management.addEmployee(emp1);
+            management.addEmployee(emp2);
+            management.addEmployee(emp3);
+            management.addEmployee(emp4);
+
+            console.log("Employee Details - ");
+            management.displayAllEmployees();
+
+            console.log("Total Salary - ");
+            console.log("Total Salary of All Employees: " + management.calculateTotalSalary());
+
+            // Update salary of one employee
+            console.log("\nUpdating Salary of Rahul...\n");
+            emp1.updateSalary(60000);
+
+            console.log("Updated Total Salary - ");
+            console.log("Total Salary After Update: " + management.calculateTotalSalary());
+        }
+
+        main();
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(name, emmp_id, department, salary) {
+                this.name = name;
+                this.emp_id = emp_id;
+                this.department = department;
+                this.salary = salary;
+            }
+
+            // function
+            displayProduct()
+            {
+                console.log(`Employee Name : ${this.name}`)
+                console.log(`Employee ID : ${this.emp_id}`)
+                console.log(`Employee Department : ${this.department}`)
+                console.log(`Employee Salary : ${this.salary}`)
+            }
+        }
+
+            // arrow function
+            const calculateTotal = (...employees) =>
+            {
+                const total = employees.reduce((sum, salary) => sum + salary, 0)
+                return total;
+            }
+
+            // promise
+            const processPayment = (totalAmount) => {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() =>
+                    {
+                        if(totalAmount > 0)
+                            resolve(`Payment successful, total paid : ${totalAmount}`)
+                        else
+                            reject(`Payment failed, invalud amount`)
+                    }, 1000)
+                })
+            }
+
+            // async fn
+            const showPaymentStatus = async (amount) =>
+            {
+                try {
+                    const message = await processPayment(amount)
+                    console.log(message)
+                }
+                catch(error) {
+                    console.log(error)
+                }
+            }
+
+            const mainCart = () => 
+            {
+                const product1 = new Product("TV", 34000, "Electronics");
+                const product2 = new Product("TV", 1000);
+                const product3 = new Product("TV", 2000);
+                
+                console.log("Product Details")
+                product1.displayProduct()
+                console.log()
+
+                product2.displayProduct()
+                console.log()
+
+                product3.displayProduct()
+                console.log()
+
+                // array
+                let prices = [product2.price, product2.price, product3.price]
+
+                // destructuring
+                let [p1, p2, p3] = prices
+
+                console.log(`Price 1 : ${p1}`)
+                console.log(`Price 2 : ${p2}`)
+                console.log(`Price 3 : ${p3}`)
+
+
+
+                let updatedPrices = [...prices, 2000]
+                console.log("Updated Price ", updatedPrices)
+
+                // calculate total
+                const totalAmount = calculateTotal(...updatedPrices)
+                console.log(`Total amount : ${totalAmount}`)
+
+                showPaymentStatus(totalAmount)
+            }
+
+            mainCart()
+    </script>
+</body>
+</html> -->
