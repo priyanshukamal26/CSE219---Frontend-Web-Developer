@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: orange;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            animation: slideDown 1s;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        marquee {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .slidebar {
+            width: 25%;
+            background: bisque;
+            padding: 20px;
+            animation: moveSide 3s ease-in infinite alternate;
+        }
+
+        .slidebar h3 {
+            margin-bottom: 15px;
+        }
+
+        .content {
+            width: 75%;
+            padding: 30px;
+        }
+
+        .big-box {
+            height: 200px;
+            background-color: blanchedalmond;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: 0.5s;
+            animation: colorMove 3s ease-in infinite alternate;
+        }
+
+        .big-box:hover {
+            /* background: orange; */
+            color: red;
+            transform: translateX(20px)
+        }
+
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes moveSide {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes colorMove {
+            from {
+                background: bisque;
+                transform: translateX(0);
+            }
+            to {
+                background: #c1942b;
+                transform: translateX(30px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img2.jpg" alt="image" height="300px">
+        <marquee>Lovely Professional University - Welcome to our website</marquee>
+    </header>
+
+    <nav>
+        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#"><i class="fa-solid fa-blog"></i> Article</a>
+        <a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a>
+    </nav>
+
+    <div class="main">
+
+        <!-- Slidebar -->
+        <div class="slidebar">
+            <h3>Slidebar Menu</h3>
+            <p>Courses</p>
+            <p>Admissions</p>
+            <p>Results</p>
+            <p>Plaements</p>
+        </div>
+
+        <!-- CONTENT -->
+         <div class="content">
+            <div class="big-box">Article Section</div>
+            <div class="big-box">Blog Section</div>
+            <div class="big-box">New Section</div>
+         </div>
+    </div>
+</body>
+</html>
