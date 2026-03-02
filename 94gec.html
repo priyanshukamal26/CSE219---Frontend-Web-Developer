@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Execution Content</title>
+</head>
+<body>
+    <h2>Global Execution Content</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+        // Global variables
+        let studentName = "Abc";
+        let course = "BTech";
+
+        function showStudent() {
+            document.getElementById('output1').innerText =
+            "Student Name : " + studentName
+        }
+
+        // Another global variable
+        function showCourse() {
+            document.getElementById('output2').innerText =
+            "Course : " + course
+        }
+
+        // Calling of Functions
+        showStudent()
+        showCourse()
+
+        // To display on console
+        console.log(studentName + "\n" + course)
+    </script>
+</body>
+</html>

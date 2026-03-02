@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h2>Closure Example</h2>
+
+    <button onclick="runClosure()">Click to execute example</button>
+
+    <p id="one"></p>
+
+    <script>
+        function outer() {
+            let name = "ABC"
+
+            // Inner function
+            function inner() {
+                return "Student Name : " + name
+            }
+            return inner
+        }
+
+        // calling outer()
+        const result  = outer()
+
+        // function to run closure
+        function runClosure() {
+            document.getElementById("one").innerHTML =
+            result()
+            console.log(result())
+        }
+    </script>
+</body>
+</html>

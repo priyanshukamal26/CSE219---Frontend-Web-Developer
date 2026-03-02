@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Execution Content 2</title> 
+    <!-- Env that keeps some var, func, arrays insode it.Global and local. -->
+</head>
+<body>
+    <h2>Global Execution Content</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+        // Global variables
+        var balance = 1000;
+        let withdraw  = 600
+
+        function showBalance() {
+            document.getElementById('output1').innerText =
+            "Balance : Rs. " + balance
+        }
+
+        // Another global variable
+        function withdrawFunc() {
+            balance = balance - withdraw
+            document.getElementById('output2').innerText =
+            "Withdraw amount : Rs. " + withdraw + ".\n Updated balance : Rs. " + balance
+        }
+
+        // Calling of Functions
+        showBalance()
+        withdrawFunc()
+
+        // To display on console
+        // console.log(studentName + "\n" + course)
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+
+    <p id="output">Count : 0</p>
+
+    <script>
+        // Outer Function
+        var count = 0; // Private variable 
+        function createCounter() {
+            return {
+                increment : function()
+                {
+
+                    count++;
+                    document.getElementById("output").innerHTML =
+                    "Count : " + count;
+                },
+
+                decrement : function()
+                {
+
+                    count--;
+                    document.getElementById("output").innerHTML =
+                    "Count : " + count;
+                }
+            }
+        }
+
+        // Create counter object
+        const counter = createCounter()
+
+        // Accessing the closure functions
+        function increase() {
+            counter.increment()
+        }
+
+        function decrease() {
+            counter.decrement()
+        }
+    </script>
+</body>
+</html>

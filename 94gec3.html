@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEC 3</title>
+</head>
+<body>
+    <h2>Global Execution Content</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+        let course = "BTech CSE"
+        function showStudent() {
+            let studentName = "ABC"
+            document.getElementById("output1").innerText =
+            "Student Name : " + studentName
+            document.getElementById("output2").innerHTML =
+            "Course : " + course
+
+            console.log("Inside function :")
+            console.log(studentName)
+            console.log(course)
+        }
+
+        // Calling of function
+        showStudent()
+    </script>
+</body>
+</html>
