@@ -1,0 +1,38 @@
+<!-- WAP to display the model details of a new bike launched in the market.
+On click of button, name of the parent object is bike,
+use prototype to display details. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prototype Example</h1>
+
+    <button onclick="showDetails()">Make Chocolate</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Parent object - Factory
+        let bike = {
+            outputFunc : function()
+            {
+                return "Model is " + name;
+            }
+        }
+
+        // create a new object using prototype
+        let shop = Object.create(factory)
+
+        // create a function to display output on webpage
+        function showDetails() {
+            document.getElementById("output").innerHTML = shop.outputFunc();
+            // console.log(shop.make());
+        }
+    </script>
+</body>
+</html>

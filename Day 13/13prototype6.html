@@ -1,0 +1,44 @@
+<!-- Write a program in which display the details of Students like
+- Name
+- Course
+- Subject
+with the help of prototype chain -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Chain</title>
+</head>
+<body>
+    <h2>Prototype Chain</h2>
+    <button onclick="showDetails()">Show Results</button>
+
+    <p id="one"></p>
+
+    <script>
+        // Grandparent Object
+        let grandParent = { 
+            name : "Student01"
+        }
+
+        // Parent object - Inherits its properties from grandparent
+        let parent = Object.create(grandParent);
+        parent.course = "BTech";
+
+        // Child Object - inherit from parent
+        let child = Object.create(parent);
+        child.subject = "DSA in CPP";
+
+        function showDetails() {
+            let result = ""
+            result += "Name : " + grandParent.name + "<br>"
+            result += "Course : " + parent.course + "<br>"
+            result += "Subject : " + child.subject + "<br>";
+            document.getElementById("one").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>

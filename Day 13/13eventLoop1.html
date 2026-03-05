@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop Example</title>
+</head>
+<body>
+    <button onclick="showExample()">Show</button>
+    <p id="two"></p>
+
+    <script>
+        function showExample() {
+            let result = "";
+            console.log("Task 01 started.");
+            result += "Task 01 started. <br>";
+
+            setTimeout(function() {
+                console.log("Task 02 is completed after 4 seconds.");
+                document.getElementById("two").innerHTML +=
+                "<br>Task 02 has completed after 4 seconds. <br>"
+            }, 4000)
+
+            console.log("Task 03 finished.");
+            result += "Task 03 finished.";
+
+            document.getElementById("two").innerHTML
+            = result;
+        }
+    </script>
+</body>
+</html>

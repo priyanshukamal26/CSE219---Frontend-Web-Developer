@@ -1,0 +1,44 @@
+<!-- Display result of 4 students.
+Student 01 : Student passed examination.
+Student 02 : setTimeout 6s, Result awaited.
+Student 03 : Student failed the examination.
+Student 04 : Result calculating, with setTmeout 3s. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop Example</title>
+</head>
+<body>
+    <button onclick="showDetails()">Show</button>
+    <p id="two"></p>
+
+    <script>
+        function showDetails() {
+            let result = "";
+            console.log("Student 01 : Student passed examination.");
+            result += "Student 01 : Student passed examination. <br>";
+
+            setTimeout(function() {
+                console.log("Student 02 : Result awaited.");
+                document.getElementById("two").innerHTML +=
+                "Student 02 : Result awaited.<br>"
+            }, 6000)
+
+            console.log("Student 03 : Student failed the examination.");
+            result += "Student 03 : Student failed the examination.";
+
+            setTimeout(function() {
+                console.log("Student 04 : Result calculating.");
+                document.getElementById("two").innerHTML +=
+                "<br>Student 04 : Result calculating.<br>"
+            }, 4000)
+
+            document.getElementById("two").innerHTML
+            = result;
+        }
+    </script>
+</body>
+</html>

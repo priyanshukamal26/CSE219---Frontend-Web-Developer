@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Chain</title>
+</head>
+<body>
+    <h2>Prototype Chain</h2>
+    <button onclick="showDetails()">Show Results</button>
+
+    <p id="one"></p>
+
+    <script>
+        // Grandparent Object
+        let grandParent = { 
+            house : "Big House"
+        }
+
+        // Parent object - Inherits its properties from grandparent
+        let parent = Object.create(grandParent);
+        parent.car = "BMW";
+
+        // Child Object - inherit from parent
+        let child = Object.create(parent);
+        child.bike = "ABC";
+
+        function showDetails() {
+            let result = ""
+            result += "Bike : " + child.bike + "<br>"
+            result += "Car : " + parent.car + "<br>"
+            result += "House : " + grandParent.house + "<br>";
+            document.getElementById("one").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>
