@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <p id="output"></p>
+
+    <script>
+        // constructor
+        function Car(name) { // parent function
+            this.name = name;
+        }
+
+        // add a method for using prototype
+        Car.prototype.start = function() // child function
+        {
+            return this.name + " is starting";
+        }
+
+        // create the object
+        let c1 = new Car("BMW")
+
+        // use method
+        document.getElementById("output").innerHTML = c1.start();
+
+
+    </script>
+</body>
+</html>

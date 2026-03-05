@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototpe Example</title>
+</head>
+<body>
+    <h2>Prototype</h2>
+    <p1 id="output"></p1>
+
+    <script>
+        // constructor
+        function Person(name) {
+            this.name = name;
+        }
+
+        // adding method using prototype
+        Person.prototype.sayHello = function() {
+            return "hello, my name is " + this.name;
+        }
+
+        // creating an object
+        let p1 = new person("ABC");
+
+        // display the output on webpage
+        document.getElementById("output") = p1.sayHello();
+    </script>
+</body>
+</html>

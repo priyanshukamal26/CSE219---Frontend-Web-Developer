@@ -1,6 +1,6 @@
 // import default export
 
-import calculateArea from './93export1.js';
+import calculateArea from '../Day 12/93export1.js';
 
 console.log("Area of circle : " + calculateArea(5));
 

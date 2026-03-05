@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <h1>Prototype Example</h1>
+
+    <button onclick="showChocolate()">Make Chocolate</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Parent object - Factory
+        let factory = {
+            makeChocolate : function()
+            {
+                return "Chocolate is ready";
+            }
+        }
+
+        // create a new object using prototype
+        let shop = Object.create(factory)
+
+        // create a function to display output on webpage
+        function showChocolate() {
+            document.getElementById("output").innerHTML = shop.makeChocolate();
+            console.log(shop.makeChocolate());
+        }
+    </script>
+</body>
+</html>
