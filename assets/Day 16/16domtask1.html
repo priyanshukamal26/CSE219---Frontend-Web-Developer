@@ -1,0 +1,90 @@
+<!-- TASK
+Design a webpage and create a contact form for college event
+Include at least 2 labels and 2 input tags.
+Form can be reset after filling.
+Include an image on the page, apply display toggle on it. 
+When user will enter the data in form, it should be stored inan unordered list.
+Change the style of 2 paragraphs, which are having one class "myClass".
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input {
+            width: 200px;
+        }
+
+        #image1 {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="">
+        <label for="name">Name : </label>
+        <input type="text" id="name" placeholder="Enter Your Full Name">
+
+        <label for="section">Section : </label>
+        <input type="text" id="section" placeholder="Enter Your Section">
+
+        <input type="submit">
+        <input type="reset">
+    </form>
+
+    <img src="/assets/scene1.jpg" id="image1" width="200px" style="display: none;">
+    <button onclick="showImage()">Toggle Image</button>
+
+    <ul id="dataList"></ul>
+
+    <p class="myClass">This is the first paragraph with class "myClass".</p>
+    <p class="myClass">This is the second paragraph with class "myClass".</p>
+
+    <script>
+        function showImage() {
+            const image = document.getElementById("image1");
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        }
+
+        const form = document.querySelector("form");
+        const dataList = document.getElementById("dataList");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const section = document.getElementById("section").value;
+
+            const listItem = document.createElement("li");
+            listItem.textContent = `Name: ${name}, Section: ${section}`;
+            dataList.appendChild(listItem);
+
+            form.reset();
+        });
+
+        const paragraphs = document.querySelectorAll(".myClass");
+        paragraphs.forEach(paragraph => {
+            paragraph.style.color = "blue";
+            paragraph.style.fontWeight = "bold";
+        });
+    </script>
+
+
+</body>
+</html>

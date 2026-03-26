@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="demo">First</p>
+    <p class="demo">Second</p>
+
+    <button onclick="changeClass()">Click</button>
+
+    <script>
+        function changeClass() {
+            let items = document.getElementsByClassName("demo")
+            items[0].style.color = "red";
+            items[1].style.color = "blue";
+
+        }
+    </script>
+</body>
+</html>

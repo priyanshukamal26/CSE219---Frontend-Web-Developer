@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="two">This is another paragraph</p>
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        function changeStyle() {
+            let element = document.getElementById("two")
+            element.style.color = "green"
+            element.style.backgroundColor = "yellow"
+            element.style.fontSize = "25px"
+            element.style.fontWeight = "bold"
+            element.style.border = "2px solid black"
+        }
+    </script>
+</body>
+</html>

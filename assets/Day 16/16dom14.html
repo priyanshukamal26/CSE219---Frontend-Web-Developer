@@ -1,0 +1,21 @@
+<!-- Adding class name to an element through JavaScript -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Hello, this is JS!</p>
+    <button onclick="changeClass()">Click</button>
+
+    <script>
+        function changeClass() {
+            let element = document.getElementById("demo")
+            element.setAttribute("class", "newClass")
+        }
+    </script>
+</body>
+</html>
