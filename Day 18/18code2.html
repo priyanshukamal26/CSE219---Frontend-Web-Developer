@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Management System</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: olive;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+        }
+
+        input {
+            padding: 10px;
+            width: 65%;
+        }
+
+        button {
+            padding: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: rgb(55, 55, 55);
+            margin: 10px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .presentBtn {
+            background: green;
+        }
+
+        .absentBtn {
+            background: rgb(177, 9, 9);
+        }
+
+        .present {
+            background-color: greenyellow;
+            color: black;
+        }
+
+        .absent {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Attendance Management System</h2>
+    <div class="container">
+        <input type="text" id="studentInput" placeholder="Enter Student name">
+        <button id="addStudent">ADD</button>
+
+        <ul id="studentList"></ul>
+    </div>
+
+    <script>
+        let input = document.getElementById("studentInput");
+        let addBtn = document.getElementById("addStudent");
+        let list = document.getElementById("studentList");
+
+        // Add student
+        addBtn.addEventListener("click", function () {
+            let name = input.value;
+            if (name === "") return;
+
+            let li = document.createElement("li");
+
+            li.innerHTML = `
+                <span>${name}</span>
+                <div>
+                    <button class="presentBtn">Present</button>
+                    <button class="absentBtn">Absent</button>
+                    <button class="deleteBtn">Delete</button>
+                </div>
+            `;
+
+            list.appendChild(li);
+            input.value = "";
+        });
+
+        // Handle button clicks in the list
+        list.addEventListener("click", function (e) {
+            let li = e.target.closest("li");
+
+            if (e.target.classList.contains("deleteBtn")) {
+                li.remove();
+            } else if (e.target.classList.contains("presentBtn")) {
+                li.classList.remove("absent");
+                li.classList.add("present");
+            } else if (e.target.classList.contains("absentBtn")) {
+                li.classList.remove("present");
+                li.classList.add("absent");
+            }
+        });
+    </script>
+</body>
+</html>
