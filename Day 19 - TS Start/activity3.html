@@ -1,0 +1,80 @@
+<!-- Develpo a simple appointment management system using JavaScript to practise DOM manipulation and event handling.
+Create a form that allows users to enter appointment details such as Name, Date and Time. 
+When te form is submitted, the appointment should be dynamicall added to a schedule displayed on the web page.
+Each appointment in the schedule should include a Delete button that allows users to remove the appointment from the list. 
+This ativity should demonstrate handling form events and updating DOM elements dynamically. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Appointment Management System</h2>
+
+    <form action="" id="appointmentForm">
+        Name : <input type="text" id="name"><br><br>
+        Date : <input type="date" id="date"><br><br>
+        Time : <input type="time" id="time"><br><br>
+        <button type="submit">Add Appointment</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="appointmentTable"></tbody>
+    </table>
+
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            let date = document.getElementById("date").value;
+            let time = document.getElementById("time").value;
+
+            let row = document.createElement("tr");
+
+            row.innerHTML = `
+            <td>${name}</td>
+            <td>${date}</td>
+            <td>${time}</td>
+            <td><button class="delete">Delete</button></td>
+            `;
+
+            document.getElementById("appointmentTable").appendChild(row);
+            this.reset();
+        });
+
+        document.getElementById("appointmentTable").addEventListener("click", function(e) {
+            if (e.target.classList.contains("delete")) {
+                e.target.parentElement.parentElement.remove();
+            }
+        });
+    </script>
+</body>
+</html>
