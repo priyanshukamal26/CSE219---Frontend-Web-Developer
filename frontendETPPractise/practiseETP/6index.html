@@ -1,0 +1,38 @@
+<!-- Q6 Question
+
+Design a webpage where users can add items to a shopping cart. 
+Display a list of products with Add to Cart buttons. 
+When a product is added, update the cart dynamically and display the total number of items in the cart. 
+Use JavaScript arrays and objects to store the cart data. 
+Add a button that displays the total price of all items in the cart. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="6style.css">
+</head>
+<body>
+
+    <h1>Shopping Cart</h1>
+    <p>Items in Cart: <span id="count">0</span></p>
+    <div id="products"></div>
+    <button id="totalBtn">Show Total Price</button>
+    <script src="6script.js"></script>
+</body>
+</html>
+
+<!-- Thinking Process / Approach
+
+We need:
+Products.
+Add to Cart buttons.
+Cart counter.
+Total price button.
+Products will be stored in an array of objects.
+When Add to Cart is clicked:
+Product goes inside cart array.
+Cart count updates.
+Total button calculates final amount. -->

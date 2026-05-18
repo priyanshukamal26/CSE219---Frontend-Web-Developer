@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .itemBox{
+            display: block;
+            padding: 20px;
+            border: 2px solid black;
+            margin-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <p style="display: block; width: 100%; text-align: center;">Total Number of items = <span id="totalNos">0</span></p>
+
+    <script>
+        const obj = [{"name":"PK", "age":20}, {"name":"SN", "age":19}]
+        setTimeout(() => {
+            for(let i = 0; i < obj.length; i++) {
+                const newdiv = document.createElement("div");
+                newdiv.classList.add("itemBox");
+
+                newdiv.innerHTML = `<h2>Name : ${obj[i].name}
+                    <p>Age : ${obj[i].age}
+                `
+                container.appendChild(newdiv);
+                // console.log(obj[i].name + " " + obj[i].age);
+            }}, 3000);
+        
+
+        document.getElementById("totalNos").innerText = `${obj.length}`;
+    </script>
+</body>
+</html>

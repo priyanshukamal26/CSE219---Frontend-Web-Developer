@@ -1,0 +1,63 @@
+<!-- Q8 Question
+
+Create a webpage containing multiple blog posts with titles and short summaries. 
+Each post should have a “View Details” button. 
+When the button is clicked, display the full blog content below the post. 
+Clicking the button again should hide the full content. 
+Use JavaScript to toggle the visibility of the content and update the button text between “View Details” and “Hide Details”. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="8style.css">
+</head>
+<body>
+
+    <div class="post">
+        <h2>Web Development</h2>
+
+        <p>Introduction to web development.</p>
+
+        <button class="toggleBtn">View Details</button>
+
+        <div class="details">
+            HTML, CSS, and JavaScript are the main technologies used in frontend web development.
+        </div>
+    </div>
+
+    <div class="post">
+        <h2>JavaScript</h2>
+
+        <p>Basics of JavaScript.</p>
+
+        <button class="toggleBtn">View Details</button>
+
+        // Add another blog post with title, summary, and full content
+        <div class="post">
+            
+        </div>
+
+        <div class="details">
+            JavaScript is used to make webpages interactive and dynamic.
+        </div>
+    </div>
+
+    <script src="8script.js"></script>
+</body>
+</html>
+
+<!-- Thinking Process / Approach
+
+We need multiple blog cards.
+Each blog should contain:
+Title
+Summary
+Full content
+Toggle button
+Full content will initially remain hidden.
+JavaScript will:
+Show/hide content.
+Change button text. -->

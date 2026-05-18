@@ -1,0 +1,46 @@
+<!-- Q3 Question
+
+Create a webpage containing a paragraph of text and three buttons
+ • Change text color
+ • Increase font size
+ • Reset style
+
+Use JavaScript to dynamically update the style properties of the paragraph when the buttons are clicked. 
+Display an alert indicating which action was performed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Styling</title>
+    <link rel="stylesheet" href="3style.css">
+</head>
+<body>
+
+    <p id="text">
+        This is a sample paragraph.
+    </p>
+
+    <button id="colorBtn">Change Text Color</button>
+    <button id="sizeBtn">Increase Font Size</button>
+    <button id="resetBtn">Reset Style</button>
+
+    <script src="3script.js"></script>
+</body>
+</html>
+
+<!-- 
+Thinking Process / Approach
+
+We need:
+One paragraph.
+Three buttons.
+Each button performs one action:
+Change color.
+Increase size.
+Reset style.
+JavaScript will directly change CSS properties using:
+style.color
+style.fontSize
+Alerts will show which action happened. -->

@@ -1,0 +1,41 @@
+<!-- Q9 Question
+
+Create a webpage that demonstrates asynchronous programming using Promises with TypeScript. 
+Add a button labeled “Load Messages”. 
+When the button is clicked:
+ • Display a loading message
+ • Use a Promise to simulate retrieving messages after a delay
+ • Display the list of messages once the promise resolves.
+
+Define appropriate TypeScript types for the message data. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises Example</title>
+    <link rel="stylesheet" href="9style.css">
+</head>
+<body>
+
+    <button id="loadBtn">Load Messages</button>
+
+    <p id="loading"></p>
+
+    <ul id="messageList"></ul>
+
+    <script src="9script.js"></script>
+</body>
+</html>
+
+<!-- Thinking Process / Approach
+
+We need:
+Button.
+Loading message.
+Messages list.
+Since Promise is required:
+We will create a Promise.
+Promise will resolve after some delay using setTimeout().
+TypeScript type will define message structure. -->

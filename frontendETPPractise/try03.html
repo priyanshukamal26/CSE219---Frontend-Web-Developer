@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Total Count = <span id="counter">0</span></p>
+    <button id="countButton">Counter</button>
+    <button id="alertBtn">Alert</button>
+
+    <script>
+        const counter = document.getElementById("counter");
+        const btn = document.getElementById("countButton");
+        let count = 0;
+        btn.addEventListener("click", function() {
+            count++;
+            counter.innerText = count;
+        })
+
+        document.getElementById("alertBtn").addEventListener("click", () => {
+            alert(`Current Count is ${count}`);
+        })
+    </script>
+</body>
+</html>

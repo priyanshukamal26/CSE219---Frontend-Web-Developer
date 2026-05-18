@@ -1,0 +1,36 @@
+<!-- Q10 Question
+
+Create a webpage that demonstrates JavaScript closures. 
+Write a function that keeps track of the number of times a button is clicked. 
+Use a closure to maintain the counter value. 
+Display the current count on the webpage every time the button is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Example</title>
+    <link rel="stylesheet" href="10style.css">
+</head>
+<body>
+
+    <h1>Button Click Counter</h1>
+
+    <button id="clickBtn">Click Me</button>
+
+    <p>Count: <span id="count">0</span></p>
+
+    <script src="10script.js"></script>
+</body>
+</html>
+
+<!-- Thinking Process / Approach
+
+The question asks for closures.
+A closure allows a function to remember variables from its outer function.
+We will:
+Create a counter function.
+Keep count variable private.
+Return another function.
+Every click updates the count. -->

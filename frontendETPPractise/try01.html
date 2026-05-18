@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            text-align: centre;
+        }
+
+        .hide {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <output id="demo">Hello</output>
+    <button id="btn">Button</button>
+
+    <script>
+        const demo = document.getElementById("demo");
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            demo.classList.toggle("hide");
+        });
+    </script>
+</body>
+</html>

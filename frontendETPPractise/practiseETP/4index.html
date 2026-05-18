@@ -1,0 +1,46 @@
+<!-- Q4 Question
+
+Create a webpage that demonstrates event handling and dynamic DOM manipulation. 
+Provide an input field where users can enter a task name. 
+When the user clicks the Add Task button, create a new task item dynamically and add it to a task list. 
+Use TypeScript to define a type for Task containing properties such as taskName and completed. 
+Clicking a task should mark it as completed by changing its style. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="4style.css">
+</head>
+<body>
+
+    <h1>Task Manager</h1>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+
+    <button id="addBtn">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script src="4script.js"></script>
+</body>
+</html>
+
+<!-- 
+Thinking Process / Approach
+
+We need:
+Input box.
+Add Task button.
+Task list.
+Every task will contain:
+taskName
+completed
+Since the question asks for TypeScript:
+We will define a type.
+Tasks will be dynamically added using JavaScript/TypeScript.
+Clicking a task should:
+Mark it completed.
+Change style. -->

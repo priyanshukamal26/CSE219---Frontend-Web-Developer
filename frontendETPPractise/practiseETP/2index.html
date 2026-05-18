@@ -1,0 +1,42 @@
+<!-- Q2 Question
+
+Design a webpage that displays a list of products loaded asynchronously. 
+Add a button labeled “Fetch Products”. 
+When the button is clicked, simulate retrieving product data using an asynchronous function. 
+Display a loading message first and then show a list of products including name, price, and category. 
+Use JavaScript objects to store product data and dynamically create elements to display them on the page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Products</title>
+    <link rel="stylesheet" href="2style.css">
+</head>
+<body>
+
+    <h1>Product List</h1>
+
+    <button id="fetchBtn">Fetch Products</button>
+
+    <p id="loading"></p>
+
+    <div id="products"></div>
+
+    <script src="2script.js"></script>
+</body>
+</html>
+
+<!-- 
+Thinking Process / Approach
+
+We need a button called “Fetch Products”.
+When clicked:
+Show loading text.
+Wait for some time.
+Display products.
+To simulate asynchronous behavior:
+We can use setTimeout().
+Products will be stored as JavaScript objects inside an array.
+We will dynamically create HTML elements using JavaScript. -->

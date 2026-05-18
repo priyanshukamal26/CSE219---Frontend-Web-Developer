@@ -1,0 +1,59 @@
+<!-- Question
+
+Create a responsive webpage layout that includes a header, a sidebar, a main content area, and a footer. 
+Use a grid layout to organize these sections. 
+Add a button in the header that toggles the visibility of the sidebar. 
+Use JavaScript to update the button text between “Show Sidebar” and “Hide Sidebar” depending on the current state. 
+When the button is clicked, display an alert indicating whether the sidebar is visible or hidden. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="1style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>My Website</h1>
+            <button id="toggleBtn">Hide Sidebar</button>
+        </header>
+
+        <aside id="sidebar">
+            <h2>Sidebar</h2>
+            <p>Sidebar content here</p>
+        </aside>
+
+        <main>
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+        </main>
+
+        <footer>
+            <p>Footer Section</p>
+        </footer>
+    </div>
+
+    <script src="1script.js"></script>
+</body>
+</html>
+
+<!-- Thinking Process / Approach
+
+We first need a webpage with 4 sections:
+Header
+Sidebar
+Main Content
+Footer
+Since the question specifically asks for a grid layout, we will use CSS Grid.
+We need a button inside the header.
+When the button is clicked:
+Sidebar should appear/disappear.
+Button text should change.
+An alert should show the current status.
+We will use JavaScript:
+classList.toggle() to hide/show the sidebar.
+textContent to update button text. -->

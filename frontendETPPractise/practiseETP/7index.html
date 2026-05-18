@@ -1,0 +1,32 @@
+<!-- Q7 Question
+
+Create a webpage that demonstrates event delegation and dynamic content generation. 
+Create a container that holds multiple dynamically generated buttons. 
+When any button inside the container is clicked, display the button text in an alert. 
+Use TypeScript to define a type for button data and dynamically generate the buttons based on an array of objects. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <link rel="stylesheet" href="7style.css">
+</head>
+<body>
+
+    <h1>Dynamic Buttons</h1>
+
+    <div id="container"></div>
+
+    <script src="7script.js"></script>
+</body>
+</html>
+
+<!-- Thinking Process / Approach
+
+We need multiple buttons generated dynamically.
+Instead of adding event listeners to every button:
+We will use event delegation.
+One event listener will be added to the parent container.
+TypeScript type will define button data. -->
